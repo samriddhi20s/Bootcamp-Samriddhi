@@ -1,4 +1,5 @@
 #Special Methods for Classes: Implement Python's special methods in your classes (like __str__, __repr__).
+#Add these methods to Employee, Manager, and Department classes.
 class Employee:
     def __init__(self, name, emp_id, position, salary):
         self.name = name
