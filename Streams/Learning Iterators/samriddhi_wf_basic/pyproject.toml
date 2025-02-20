@@ -1,0 +1,29 @@
+[project]
+name = "samriddhi_wf_basic"
+version = "0.2.2"
+description = "Basic record processing system"
+authors = [
+    {name = "Samriddhi Chaturvedi",email = "samridhichaturvedi9@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["typer"
+]
+
+[tool.poetry]
+name = "samriddhi_wf_basic"   
+version = "0.2.2"            
+description = "A Python package for basic record processing"
+authors = ["Samriddhi Chaturvedi , samridhichaturvedi9@gmail.com"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["setuptools","wheel","poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project.scripts]
+samriddhi_wf_basic = "samriddhi_wf_basic.commands:app"
