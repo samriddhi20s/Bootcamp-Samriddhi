@@ -1,0 +1,29 @@
+[project]
+name = "samriddhi-wf-dynamic"
+version = "0.1.0"
+description = "A dynamic text processing tool using YAML configurations"
+authors = [
+    {name = "Samriddhi Chaturvedi",email = "samridhichaturvedi9@gmail.com"}
+]
+readme = "README.md"
+dependencies = [
+    "typer",
+    "pyyaml"
+]
+
+[tool.poetry]
+license = "MIT"
+packages = [{include = "samriddhi_wf_dynamic", from = "src"}]
+
+[tool.poetry.dependencies]
+samriddhi-wf-basic = "^0.2.0"  # Depend on your previously published package
+pyyaml = "^6.0"
+typer = "^0.9.0"
+
+[project.scripts]
+dynamic = "samriddhi_wf_dynamic.dynamic:app"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
