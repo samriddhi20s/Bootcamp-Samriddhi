@@ -54,7 +54,7 @@ class TransportNetwork:
     def sort_routes_by_stops(self, descending=False):
         return sorted(self.routes.items(), key=lambda x: len(x[1]), reverse=descending)
 
-    # Display all data
+    
     def display_network(self):
         print("\nTransport Routes & Stops:")
         print(json.dumps(self.routes, indent=2))
@@ -63,7 +63,7 @@ class TransportNetwork:
         print("\nMost Frequented Stations:", self.busiest_stations())
         print("Peak Travel Times:", self.peak_travel_times())
 
-# Example Usage
+# Example 
 network = TransportNetwork()
 network.add_route("Blue Line", ["Central Station", "West End", "North Gate"])
 network.add_route("Red Line", ["Downtown", "Central Station", "South Terminal"])
@@ -73,7 +73,6 @@ network.add_passenger("Blue Line", "08:00 AM", "Alice", "Central Station")
 network.add_passenger("Blue Line", "08:00 AM", "Bob", "West End")
 network.add_passenger("Red Line", "09:30 AM", "Charlie", "Downtown")
 
-# Display the network data
 network.display_network()
 
 # Sort routes by number of stops
