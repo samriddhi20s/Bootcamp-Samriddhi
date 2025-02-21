@@ -4,7 +4,12 @@ conn = sqlite3.connect("example.db")
 cursor = conn.cursor()
 
 
-cursor.execute()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS COMPANIES (
+    company_name VARCHAR(20),
+    id INT PRIMARY KEY
+);
+""")
 
 # Insert 500 records
 for i in range(1, 501):
