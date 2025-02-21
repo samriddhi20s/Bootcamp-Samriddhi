@@ -9,6 +9,6 @@ def fibonacci(n):
         return n
     return fibonacci(n - 1) + fibonacci(n - 2)
 
-# Example usage:
+# Example
 n = 10
 print(f"Fibonacci number at position {n}: {fibonacci(n)}")
