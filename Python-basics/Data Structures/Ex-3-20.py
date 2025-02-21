@@ -11,7 +11,6 @@ bus_routes = {
 # Sort routes based on the number of stops
 sorted_routes = sorted(bus_routes.items(), key=lambda x: len(x[1]))
 
-# Display results
 print("Bus Routes Sorted by Number of Stops:")
 for route, stops in sorted_routes:
     print(f"{route}: {len(stops)} stops")
