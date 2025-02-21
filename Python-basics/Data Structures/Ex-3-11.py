@@ -18,7 +18,6 @@ train_schedule = [
     Schedule("5:30 AM", "Airport")
 ]
 
-# Print schedules
 print("Bus Schedule:")
 for stop in bus_schedule:
     print(f"At {stop.time}, arriving at {stop.station}")
