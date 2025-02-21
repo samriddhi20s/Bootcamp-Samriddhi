@@ -25,7 +25,7 @@ class Point:
     def __repr__(self):
         return f"Point({self.x}, {self.y})"
 
-# Example usage
+# Example 
 point1 = Point(3, 4)
 point2 = Point(1, 1)
 point3 = Point(6, 8)
