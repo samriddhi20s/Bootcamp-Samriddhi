@@ -17,7 +17,6 @@ station_counts = Counter(passenger_data)
 time_counts = Counter(passenger_times)
 name_counts = Counter(passenger_names)
 
-# Display results
 print("Passenger Count per Station:")
 print(station_counts)
 print("\nMost Common Station:", station_counts.most_common(1))
