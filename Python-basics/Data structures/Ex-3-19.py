@@ -16,7 +16,6 @@ station_counts = Counter(station_visits)
 # Sort stations by most visits (Descending order)
 sorted_stations = sorted(station_counts.items(), key=lambda x: x[1], reverse=True)
 
-# Display results
 print("Stations sorted by frequency:")
 for station, count in sorted_stations:
     print(f"{station}: {count} visits")
@@ -34,7 +33,6 @@ transport_schedule = {
 # Sort passengers alphabetically for each time slot
 sorted_schedule = {time: sorted(passengers) for time, passengers in transport_schedule.items()}
 
-# Display results
 print("\nSorted Passengers per Time Slot:")
 for time, passengers in sorted_schedule.items():
     print(f"{time}: {passengers}")
@@ -53,7 +51,6 @@ train_schedule = {
 # Convert time to datetime format and sort
 sorted_trains = sorted(train_schedule.items(), key=lambda x: datetime.strptime(x[1], "%I:%M %p"))
 
-# Display results
 print("\nTrain Lines Sorted by Departure Time:")
 for line, time in sorted_trains:
     print(f"{line}: {time}")
