@@ -14,7 +14,6 @@ class Book:
 
     @staticmethod
     def validate_isbn(isbn):
-        # Basic validation: check if the ISBN is 13 digits long
         if len(isbn) == 13 and isbn.isdigit():
             return True
         return False
