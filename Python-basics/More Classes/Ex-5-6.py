@@ -20,12 +20,12 @@ class Temperature:
 # Testing the Temperature class
 try:
     t1 = Temperature(25)
-    print(f"Temperature is: {t1.temp}°C")  # Should print 25
+    print(f"Temperature is: {t1.temp}°C")  # output 25
 
     t1.temp = 300
-    print(f"Updated temperature is: {t1.temp}°C")  # Should print 300
+    print(f"Updated temperature is: {t1.temp}°C")  # output 300
 
     t1.temp = -300  # Invalid temperature
 except ValueError as e:
-    print(e)  # Should raise an error
+    print(e)  # raise an error
 
