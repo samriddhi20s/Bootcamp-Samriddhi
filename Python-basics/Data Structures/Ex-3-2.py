@@ -12,6 +12,5 @@ bus_routes = [
     "Route 10: Riverfront - Amusement Park"
 ]
 
-# Print all bus routes
 for route in bus_routes:
     print(route)
