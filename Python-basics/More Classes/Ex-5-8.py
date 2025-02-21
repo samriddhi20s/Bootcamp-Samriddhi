@@ -26,5 +26,5 @@ class Cat(Animal):
 dog = Dog()
 cat = Cat()
 
-print(f"The dog says: {dog.sound}")  # Should print "Bark"
-print(f"The cat says: {cat.sound}")  # Should print "Meow"
+print(f"The dog says: {dog.sound}")  # output "Bark"
+print(f"The cat says: {cat.sound}")  # output "Meow"
