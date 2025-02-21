@@ -8,5 +8,4 @@ squares = [x**2 for x in range(1, 11)]
 # Use functools.reduce to calculate the sum of the squares
 sum_of_squares = functools.reduce(lambda a, b: a + b, squares)
 
-# Output the result
 print(f"Sum of squares: {sum_of_squares}")
