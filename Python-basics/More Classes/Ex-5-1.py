@@ -12,6 +12,5 @@ class Book:
 book1 = Book("To Kill a Mockingbird", "Harper Lee")
 book2 = Book("1984", "George Orwell")
 
-# Print the instances
 print(book1)
 print(book2)
