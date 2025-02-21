@@ -37,9 +37,8 @@ train_lines["Blue Line"].extend([
 
 # Accessing a non-existent route (no KeyError due to defaultdict)
 print("Checking a missing bus route:")
-print(bus_routes["Route 99"])  # Returns [] instead of raising a KeyError
+print(bus_routes["Route 99"])  # Returns [] 
 
-# Print all schedules
 print("\nBus Routes Schedule:")
 for route, stops in bus_routes.items():
     for stop in stops:
