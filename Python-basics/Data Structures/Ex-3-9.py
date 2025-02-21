@@ -25,6 +25,5 @@ for stations in train_lines.values():
 # Calculate total number of unique stations
 total_unique_stations = len(unique_stations)
 
-# Display result
 print("Total number of unique stations:", total_unique_stations)
 print("List of unique stations:", sorted(unique_stations))  # Sorted for readability
