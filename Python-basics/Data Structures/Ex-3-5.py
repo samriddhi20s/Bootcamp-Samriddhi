@@ -9,5 +9,4 @@ purple_line = {"Tech Park", "Convention Center", "Shopping Mall", "Residential A
 # Use a set union to combine all unique stations
 all_unique_stations = red_line | blue_line | green_line | yellow_line | purple_line  # Union operation
 
-# Print the set of unique stations
 print(all_unique_stations)
