@@ -15,10 +15,10 @@ class FileOpen:
         """Close the file when the context exits."""
         if self.file:
             self.file.close()
-        # Optionally, handle exceptions (returning True prevents the exception from propagating)
+        # handle exceptions (returning True prevents the exception from propagating)
         if exc_type:
             print(f"An error occurred: {exc_value}")
-        return False  # Propagate exception (if any)
+        return False  
 
 # Using the FileOpen context manager
 try:
