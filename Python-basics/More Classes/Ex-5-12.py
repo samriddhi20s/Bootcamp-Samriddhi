@@ -7,7 +7,6 @@ from abc import ABC, abstractmethod
 class Streamable(ABC):
     @abstractmethod
     def stream(self):
-        """The method that must be implemented by any subclass."""
         pass
 
 # Subclass for Video Streaming
@@ -24,5 +23,5 @@ class AudioStream(Streamable):
 video = VideoStream()
 audio = AudioStream()
 
-print(video.stream())  # Should print "Streaming video content..."
-print(audio.stream())  # Should print "Streaming audio content..."
+print(video.stream()) 
+print(audio.stream())  
