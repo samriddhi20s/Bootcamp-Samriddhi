@@ -7,6 +7,5 @@ train_lines = {
     "Purple Line": ["Tech Park", "Convention Center", "Shopping Mall", "Residential Area"]
 }
 
-# Print all train lines and their stations
 for line, stations in train_lines.items():
     print(f"{line}: {', '.join(stations)}")
