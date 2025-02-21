@@ -2,7 +2,6 @@
 #Use type to create a new class with dynamically specified properties.
 # Dynamically creating a class with `type`
 def create_class(class_name, properties):
-    # Dynamically create a class with specified properties
     return type(class_name, (object,), properties)
 
 # Define properties and methods for the class
@@ -19,6 +18,6 @@ Person = create_class("Person", properties)
 person_instance = Person()
 
 # Accessing the dynamically added properties
-print(person_instance.name)  # Should print 'John Doe'
-print(person_instance.age)   # Should print 30
-print(person_instance.greet())  # Should print "Hello, my name is John Doe"
+print(person_instance.name)  # output 'John Doe'
+print(person_instance.age)   # output print 30
+print(person_instance.greet())  # output "Hello, my name is John Doe"
