@@ -12,4 +12,3 @@ serialize_object(person1)
 # Deserialize from file
 loaded_person = deserialize_object()
 print("Deserialized Object:", loaded_person)
-
