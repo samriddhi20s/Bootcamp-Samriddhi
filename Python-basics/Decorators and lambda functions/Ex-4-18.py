@@ -6,5 +6,5 @@ input_list = ["hello", 3, "world", 5, "python", 2]
 # List comprehension with conditional logic
 output_list = [item.upper() if isinstance(item, str) else item**2 if isinstance(item, int) else item for item in input_list]
 
-# Output the transformed list
+# the transformed list
 print(output_list)
