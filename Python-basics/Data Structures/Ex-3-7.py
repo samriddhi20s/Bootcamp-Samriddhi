@@ -39,6 +39,6 @@ transit_schedule = {
     ]
 }
 
-# Print schedule for a specific route
+# schedule for a specific route
 for time, station in transit_schedule["Red Line (Train)"]:
     print(f"Red Line Train - {time} at {station}")
