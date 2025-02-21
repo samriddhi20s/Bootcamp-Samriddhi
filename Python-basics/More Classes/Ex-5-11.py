@@ -5,7 +5,6 @@ class MyClass:
     instance_count = 0
 
     def __init__(self):
-        # Increment the instance count every time a new instance is created
         MyClass.instance_count += 1
 
     @staticmethod
@@ -19,4 +18,4 @@ obj2 = MyClass()
 obj3 = MyClass()
 
 # Accessing the static method to get the count of instances
-print(f"Number of instances created: {MyClass.get_instance_count()}")  # Should print 3
+print(f"Number of instances created: {MyClass.get_instance_count()}")  
