@@ -33,7 +33,6 @@ train_lines = {
     ]
 }
 
-# Print bus schedules
 print("Bus Routes Schedule:")
 for route, stops in bus_routes.items():
     for stop in stops:
