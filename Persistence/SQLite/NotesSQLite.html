@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding SQLite & ACID Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .answer {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding SQLite & ACID Properties</h1>
+    
+    <div class="question">1. What are transactions?</div>
+    <div class="answer">A transaction is a group of database operations executed as a single unit. Either all changes within a transaction happen, or none do, ensuring data integrity.</div>
+    
+    <div class="question">2. What are ACID properties?</div>
+    <div class="answer">
+        <ul>
+            <li><strong>Atomicity:</strong> Ensures that a transaction is fully completed or not at all.</li>
+            <li><strong>Consistency:</strong> Guarantees that the database remains valid before and after a transaction.</li>
+            <li><strong>Isolation:</strong> Prevents transactions from affecting each other.</li>
+            <li><strong>Durability:</strong> Ensures that committed data remains even after system failures.</li>
+        </ul>
+    </div>
+    
+    <div class="question">3. Suppose you do not have transactions. Is that system useful? Why?</div>
+    <div class="answer">Without transactions, data integrity is at risk. If a failure occurs mid-operation, only partial changes might be saved, leading to corruption.</div>
+    
+    <div class="question">4. What properties does your file system have?</div>
+    <div class="answer">Most file systems provide some level of atomicity, but they lack built-in ACID guarantees. File systems prioritize performance over transactional consistency.</div>
+    
+    <div class="question">5. Suppose you do not have "A" in ACID. What happens? When is it ok?</div>
+    <div class="answer">Without Atomicity, partial transactions may be saved, causing inconsistent data. It might be acceptable in logging systems where partial data is better than none.</div>
+    
+    <div class="question">6. Suppose you do not have "C" in ACID. What happens? When is it ok?</div>
+    <div class="answer">Without Consistency, data may violate rules, leading to corruption. Some NoSQL databases allow temporary inconsistency for better performance.</div>
+    
+    <div class="question">7. Suppose you do not have "I" in ACID. What happens? When is it ok?</div>
+    <div class="answer">Without Isolation, multiple transactions can interfere, causing unexpected results. It’s fine in scenarios where real-time speed is prioritized over accuracy.</div>
+    
+    <div class="question">8. Suppose you do not have "D" in ACID. What happens? When is it ok?</div>
+    <div class="answer">Without Durability, committed data might be lost after system crashes. It’s acceptable for temporary data like caches.</div>
+    
+    
+    <h2>Conclusion</h2>
+    <p>Understanding transactions and ACID properties is essential when working with databases. Choosing the right system depends on the use case, whether it's performance, reliability, or scalability.</p>
+</body>
+</html>
+
