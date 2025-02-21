@@ -34,7 +34,7 @@ train_lines = {
     ]
 }
 
-# Print structured data
+
 print("Bus Routes Schedule:")
 for route, stops in bus_routes.items():
     for stop in stops:
