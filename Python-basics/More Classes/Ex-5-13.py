@@ -5,7 +5,6 @@ import json
 # Mixin class for JSON functionality
 class JsonMixin:
     def to_json(self):
-        """Serialize the object to a JSON string."""
         return json.dumps(self.__dict__)  # Convert the object's attributes to a dictionary
 
     @classmethod
@@ -14,13 +13,12 @@ class JsonMixin:
         data = json.loads(json_string)
         return cls(**data)  # Create a new instance of the class using the deserialized data
 
-# Class that uses the JsonMixin
 class Person(JsonMixin):
     def __init__(self, name, age):
         self.name = name
         self.age = age
 
-# Class that also uses the JsonMixin
+
 class Product(JsonMixin):
     def __init__(self, name, price):
         self.name = name
