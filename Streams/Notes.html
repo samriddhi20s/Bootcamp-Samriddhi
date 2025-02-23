@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Streams Notes</title>
+</head>
+<body>
+    <h1>Streams Notes</h1>
+    <h2>Tasks Covered</h2>
+    <ul>
+        <li>Drills</li>
+        <li>Workflow Apps</li>
+        <li>Record Processing</li>
+        <li>Step 1: Basic Record Processing</li>
+        <li>Step 1.5: Extending Functionality</li>
+        <li>Step 2: Customizing the Application</li>
+        <li>Step 2.5: Learning Iterators</li>
+        <li>Step 2.75: Stream Functions</li>
+        <li>Step 3: Using Iterators for Pipelines</li>
+        <li>Step 3.5: Adapter Functions</li>
+    </ul>
+    
+    <h2>Approach</h2>
+    <p>For each step, I followed the given guidelines, implemented the functionality, and tested the scripts to ensure correctness.</p>
+    
+    <h2>Issues Faced & Solutions</h2>
+    <h4>1. Error: poetry.lock not found. Run poetry lock to create it.</h4>
+    <p><strong>Solution:</strong> Run the following command to generate the lock file:</p>
+    <pre><code>poetry lock</code></pre>
+    <p>If the error persists, ensure that your <code>pyproject.toml</code> is correctly set up and try:</p>
+    <pre><code>poetry install</code></pre>
+    
+    <h4>2. Because samriddhi-wf-dynamic depends on samriddhi-wf-basic (^0.2.0) which doesn't match any versions, version solving failed.</h4>
+    <p><strong>Solution:</strong> Ensure that <code>samriddhi-wf-basic</code> version 0.2.0 is correctly published. If not, republish it using:</p>
+    <pre><code>poetry publish --build</code></pre>
+    <p>Then, try updating dependencies in <code>samriddhi-wf-dynamic</code>:</p>
+    <pre><code>poetry update</code></pre>
+    
+    <h4>3. ERROR: Could not find a version that satisfies the requirement samriddhi-wf-basic==0.2.0 (from versions: none)</h4>
+    <p><strong>Solution:</strong> Check if the package was successfully uploaded to Test PyPI:</p>
+    <pre><code>poetry publish --repository testpypi</code></pre>
+    <p>Verify package availability at <a href="https://test.pypi.org/">Test PyPI</a>. If needed, update and republish the package.</p>
+    
+    <h4>4. ERROR: 400 Bad Request from Test PyPI</h4>
+    <p><strong>Solution:</strong> This is usually due to authentication issues. Ensure correct credentials by running:</p>
+    <pre><code>poetry config pypi-token.testpypi YOUR_TOKEN</code></pre>
+    <p>Then, retry publishing with:</p>
+    <pre><code>poetry publish --build --repository testpypi</code></pre>
+    
+    <h4>Error 5: dynamic: command not found</h4>
+    <p><strong>Solution:</strong>
+        <ul>
+            <li>Step 1: Ensure the package is installed correctly.</li>
+            <li>Step 2: Verify that the dynamic command exists.</li>
+            <li>Step 3: Check pyproject.toml for correct configurations.</li>
+            <li>Step 4: Check Python path issues.</li>
+        </ul>
+    </p>
+    
+    <h4>Error 6: toml-lint: command not found</h4>
+    <p><strong>Solution:</strong> Install toml-lint using <code>pip install toml-lint</code> and validate.</p>
+    
+    <h4>Error 7: Could not find a version that satisfies the requirement toml-lint</h4>
+    <p><strong>Solution:</strong> Manually check and validate pyproject.toml and attempt to reinstall.</p>
+    
+    
+    <h2>Learnings</h2>
+    <ul>
+        <li>How to use iterators and streams efficiently.</li>
+        <li>How to process large files without loading them into memory.</li>
+        <li>How to create pipelines for stream processing.</li>
+        <li>How to package and publish Python modules using Poetry.</li>
+        <li>How to debug dependency and packaging issues.</li>
+    </ul>
+    
+    <h2>ChatGPT Assistance</h2>
+    <p>ChatGPT helped in debugging errors, suggesting improvements for iterator-based pipelines, and clarifying concepts related to Poetry package management.
+    
+    </p>
+</body>
+</html>
