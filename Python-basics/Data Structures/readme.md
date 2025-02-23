@@ -9,7 +9,7 @@ This document explores fundamental data structures in Python by modeling a trans
 ## Using Sets for Unique Elements
 - Create a set of all unique stations in the transportation system.
 
-## Nested Data Structures for Organization
+## Nested Data Structures 
 - Create a dictionary where each key is a route, and the value is a list of tuples representing scheduled stops (time, station).
 
 ## Aggregating Data
@@ -35,6 +35,6 @@ This document explores fundamental data structures in Python by modeling a trans
 - Create a `TransportNetwork` class that integrates all previous data structures.
 - Implement methods to add routes, update schedules, and add passengers.
 
-This project provides practical experience with Python's core data structures while modeling a real-world system.
+This provides practical experience with Python's core data structures while modeling a real-world system.
 
 
