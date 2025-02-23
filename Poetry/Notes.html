@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Setup Notes</title>
+</head>
+<body>
+    <h1>Poetry Setup Notes</h1>
+    
+    <h2>Understanding the Task</h2>
+    <p>The objective was to install and configure Poetry, a dependency management and packaging tool for Python, on a Linux system, and successfully build and publish packages to TestPyPI.</p>
+    
+    <h2>Approach</h2>
+    <ol>
+        <li>Installed and configured Poetry.</li>
+        <li>Created a Python project and managed dependencies.</li>
+        <li>Built and published a module using TestPyPI.</li>
+        <li>Configured <code>pyproject.toml</code> for automatic TestPyPI publishing.</li>
+        <li>Developed a CLI tool with Typer.</li>
+        <li>Ensured <code>pip install</code> works with an entry-point command.</li>
+        <li>Learned how to work with <code>requirements.txt</code> in Poetry.</li>
+    </ol>
+    
+    <h2>Problems Faced</h2>
+    
+    <h3>Command Not Found</h3>
+    <p>After running the initial installation command, the terminal returned:</p>
+    <blockquote>Command 'poetry' not found, but can be installed with: sudo apt install python3-poetry</blockquote>
+    <p>Solution: Installed it using the suggested command.</p>
+    
+    <h3>Invalid Configuration Error</h3>
+    <p>Encountered the following error after setting up Poetry:</p>
+    <blockquote>The Poetry configuration is invalid: - data.source[0] must not contain {'default'} properties</blockquote>
+    <p>Solution: Identified and corrected the misconfiguration by changing <code>default</code> to <code>primary</code>.</p>
+    
+    <h3>Build Command Error</h3>
+    <p>Command: <code>poetry build</code></p>
+    <p>Error: The Poetry configuration is invalid: - data.source[0].priority must be one of ['primary', 'supplemental', 'explicit']</p>
+    <p>Solution: Modified <code>priority</code> to <code>primary</code> in the configuration.</p>
+    
+    <h3>Publishing Error</h3>
+    <p>Command: <code>poetry publish -r testpypi --username __token__ --password &lt;testpypi_token&gt;</code></p>
+    <p>Error: HTTP Error 405: Method Not Allowed</p>
+    <p>Solution: Attempted an alternative approach:<br>
+       <code>poetry config pypi-token.testpypi &lt;your_testpypi_token&gt;</code></p>
+    
+    <h2>What I Learned</h2>
+    <ul>
+        <li>Alternative ways to install Poetry when the primary method fails.</li>
+        <li>How to troubleshoot common installation and configuration errors.</li>
+        <li>The importance of verifying installations after setup.</li>
+        <li>Proper configuration steps for publishing packages to TestPyPI.</li>
+    </ul>
+    
+    <h2>ChatGPT Assistance</h2>
+    <p>ChatGPT helped by:</p>
+    <ul>
+        <li>Suggesting alternative installation methods when the first attempt failed.</li>
+        <li>Providing insights on resolving the Poetry configuration issue.</li>
+        <li>Assisting in troubleshooting build and publishing errors.</li>
+        <li>Explaining how to set up authentication for TestPyPI publishing.</li>
+    </ul>
+    <ul>
+      <p>Links:</p>
+      <li><href>https://chatgpt.com/share/67bafadc-745c-8004-8e82-0b615d40ec54</href></li>
+      <li><href>https://chatgpt.com/share/67bafb15-748c-8004-9a53-956ed3a45fc5</href></li>
+      <li><href>https://chatgpt.com/share/67bafa38-b690-8004-87cf-df9cda14d140</href></li>
+    </ul>
+</body>
+</html>
