@@ -22,3 +22,6 @@ pytest = "^8.3.4"
 name = "testpypi"
 url = "https://test.pypi.org/simple/"
 default = false
+
+[tool.poetry.scripts]
+task-cli = "task_my_module.cli:main"
