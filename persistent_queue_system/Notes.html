@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Notes - Persistent Queue System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Notes: Persistent Queue System</h1>
 
+    <div class="section">
+        <h2>1. Project Overview</h2>
+        <p>
+            The <strong>Persistent Queue System</strong> is a producer-consumer system where:
+        </p>
+        <ul>
+            <li><strong>Producers</strong> submit jobs to a persistent queue.</li>
+            <li><strong>Consumers</strong> process jobs from the queue and generate new entities.</li>
+            <li>The queue is <strong>persistent</strong>, meaning jobs survive application restarts.</li>
+            <li>The system supports <strong>multiple producers and consumers</strong> and is robust against crashes.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Tasks and My Approach</h2>
+        <h3>2.1. Tasks</h3>
+        <ul>
+            <li>Design and implement a persistent queue system.</li>
+            <li>Create producer and consumer applications.</li>
+            <li>Build Ops and Admin consoles for monitoring and managing the queue.</li>
+            <li>Use Supervisor to manage processes.</li>
+            <li>Ensure the system is robust and handles failures gracefully.</li>
+        </ul>
+
+        <h3>2.2. My Approach</h3>
+        <ul>
+            <li><strong>Queue Implementation:</strong> Used SQLite as the backend for the persistent queue.</li>
+            <li><strong>Producer:</strong> Generates random files and submits them as jobs to the queue.</li>
+            <li><strong>Consumer:</strong> Processes jobs by adding timestamps to files and marking them as processed.</li>
+            <li><strong>Ops Console:</strong> Built with Streamlit to monitor job status and details.</li>
+            <li><strong>Admin Console:</strong> Built with Streamlit to manage the queue (e.g., resubmit or cancel jobs).</li>
+            <li><strong>Supervisor:</strong> Configured to manage and monitor producer and consumer processes.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Problems Faced</h2>
+        <ul>
+            <li><strong>SQLite Database Path:</strong> Initially faced issues with the <code>db_path</code> due to missing directories or invalid paths. Fixed by ensuring the directory exists using <code>os.makedirs</code>.</li>
+            <li><strong>Supervisor Configuration:</strong> Encountered errors like <code>UNKNOWN_METHOD</code> and port conflicts. Resolved by adding the <code>[rpcinterface:supervisor]</code> section and ensuring the port was free.</li>
+            <li><strong>Streamlit Console:</strong> Faced challenges in integrating the Ops and Admin consoles with the queue. Fixed by ensuring proper imports and database connections.</li>
+            <li><strong>Process Management:</strong> Struggled with running producer and consumer simultaneously. Used Supervisor to manage both processes effectively.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. What I Learned</h2>
+        <ul>
+            <li><strong>Persistent Queues:</strong> Learned how to implement a persistent queue using SQLite.</li>
+            <li><strong>Producer-Consumer Pattern:</strong> Understood the design and implementation of a producer-consumer system.</li>
+            <li><strong>Streamlit:</strong> Gained experience in building interactive web-based consoles for monitoring and management.</li>
+            <li><strong>Supervisor:</strong> Learned how to use Supervisor to manage and monitor multiple processes.</li>
+            <li><strong>Error Handling:</strong> Improved my skills in debugging and resolving issues related to file paths, ports, and process management.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Assistance from ChatGPT</h2>
+        <p>
+            ChatGPT provided significant assistance throughout the project:
+        </p>
+        <ul>
+            <li><strong>Code Debugging:</strong> Helped identify and fix errors like <code>NameError</code>, <code>UNKNOWN_METHOD</code>, and port conflicts.</li>
+            <li><strong>Implementation Guidance:</strong> Provided code snippets and explanations for implementing the persistent queue, producer, consumer, and consoles.</li>
+            <li><strong>Supervisor Configuration:</strong> Assisted in setting up and troubleshooting the <code>supervisord.conf</code> file.</li>
+            <li><strong>Best Practices:</strong> Suggested improvements like using absolute paths, error handling, and logging.</li>
+            <li><strong>Documentation:</strong> Helped create the <code>README.md</code> and <code>notes.html</code> files.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Conclusion</h2>
+        <p>
+            The <strong>Persistent Queue System</strong> project was a great learning experience. I gained hands-on experience with producer-consumer systems, persistent queues, Streamlit, and Supervisor. Despite facing challenges, I was able to resolve them with the help of ChatGPT and online resources. This project has strengthened my understanding of system design, process management, and debugging.
+        </p>
+    </div>
+</body>
+</html>
