@@ -1,0 +1,50 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore virtual environment files
+venv/
+.env/
+.env.local
+.env.development
+.env.production
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+*.bak
+
+# Ignore SQLite database files
+*.db
+*.sqlite3
+
+# Ignore Streamlit cache and config
+.streamlit/
+.streamlit/secrets.toml
+
+# Ignore data folder (if not meant to be tracked)
+data/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python package distribution files
+dist/
+build/
+*.egg-info/
