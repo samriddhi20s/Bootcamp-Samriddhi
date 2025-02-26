@@ -1,7 +1,8 @@
 # Persistent Queue System
 
 ## Overview
-This project implements a **producer-consumer system** with a **persistent queue** that survives application restarts. The system supports multiple producers and consumers, ensuring robustness and job persistence. Jobs are stored in an SQLite database, and the system includes monitoring and management consoles built with Streamlit.
+The Persistent Queue System is a robust producer-consumer system designed to handle job submissions and processing reliably. It ensures that jobs are persisted across application restarts and can handle multiple producers and consumers. The system is designed to be fault-tolerant, with mechanisms to handle consumer crashes and problematic jobs.
+
 
 ## System Design
 - **Producer**: Submits jobs to the queue.
@@ -30,20 +31,28 @@ The system consists of the following components:
    - A Streamlit-based console to manage the queue (e.g., resubmit or cancel jobs).
 
 6. **Supervisor:**
-   - Manages the producer and consumer processes (optional).
+   - Manages the producer and consumer processes.
 
+## Problem Description
+In distributed systems, ensuring reliable job processing is a common challenge. Producers submit jobs to a queue, and consumers process them. However, issues such as consumer crashes, problematic jobs, and system restarts can lead to job loss or duplication. This project addresses these challenges by implementing a persistent queue system that:
+- Persists jobs across application restarts.
+- Handles consumer crashes gracefully.
+- Detects and manages problematic jobs.
+- Abstracts the database implementation for future extensibility.
+  
 ## Usage Instructions
 - Install dependencies: `pip install -r requirements.txt`
-- Run producers: `python -m producer`
-- Run consumers: `python -m consumer`
+- Run producers: `python3 -m producer.py`
+- Run consumers: `python3 -m consumer.py`
 - Run Ops console: `streamlit run ops_console.py`
 - Run Admin console: `streamlit run admin_console.py`
 
 ## Task Flow
 ```mermaid
 graph TD
-    A[Producer] --> B[Queue]
-    B --> C[Consumer]
-    C --> D[Processed Jobs]
-    B --> E[Ops Console]
-    B --> F[Admin Console]
+    Producer -->|Submit Job| Queue
+    Queue -->|Dequeue Job| Consumer
+    Consumer -->|Acknowledge| Queue
+    Consumer -->|Crash| Queue
+    Queue -->|Requeue Job| Consumer
+    Queue -->|Move to Dead Letter| DeadLetterQueue
