@@ -113,3 +113,38 @@ The **Persistent Queue System** is a robust, file-based queue system designed to
   - `Streamlit`: For building web-based interfaces.
   - `SQLite`: For persistent storage of messages and metadata.
   - `Supervisord`: For process management and monitoring
+
+## Problems Faced
+1. **SQLite Database Path**:
+   - Initially faced issues with the `db_path` due to missing directories or invalid paths.
+   - **Solution**: Fixed by ensuring the directory exists using `os.makedirs`.
+
+2. **Supervisor Configuration**:
+   - Encountered errors like `UNKNOWN_METHOD` and port conflicts.
+   - **Solution**: Resolved by adding the `[rpcinterface:supervisor]` section and ensuring the port was free.
+
+3. **Streamlit Console**:
+   - Faced challenges in integrating the Ops and Admin consoles with the queue.
+   - **Solution**: Fixed by ensuring proper imports and database connections.
+
+4. **Process Management**:
+   - Struggled with running producer and consumer simultaneously.
+   - **Solution**: Used Supervisor to manage both processes effectively.
+
+---
+
+## What I Learned
+1. **Persistent Queues**:
+   - Learned how to implement a persistent queue using SQLite.
+
+2. **Producer-Consumer Pattern**:
+   - Understood the design and implementation of a producer-consumer system.
+
+3. **Streamlit**:
+   - Gained experience in building interactive web-based consoles for monitoring and management.
+
+4. **Supervisor**:
+   - Learned how to use Supervisor to manage and monitor multiple processes.
+
+5. **Error Handling**:
+   - Improved my skills in debugging and resolving issues related to file paths, ports, and process management.
