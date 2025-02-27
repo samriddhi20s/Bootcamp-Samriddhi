@@ -1,0 +1,58 @@
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 10
+    print(f'Processing job: {job['id']}')
+                                  ^^
+SyntaxError: f-string: unmatched '['
+Traceback (most recent call last):
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 33, in <module>
+    consume_jobs()
+  File "/mnt/c/Users/samri/persistent_queue_system/consumer.py", line 23, in consume_jobs
+    job = queue.dequeue()
+  File "/mnt/c/Users/samri/persistent_queue_system/persistent_queue/queue.py", line 14, in dequeue
+    job = self.database.get_job()
+  File "/mnt/c/Users/samri/persistent_queue_system/persistent_queue/sqlite_queue.py", line 33, in get_job
+    cursor = conn.execute('SELECT * FROM jobs WHERE status = ? LIMIT 1', ('pending',))
+sqlite3.OperationalError: no such table: jobs
