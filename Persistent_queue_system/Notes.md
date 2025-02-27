@@ -149,6 +149,6 @@ The **Persistent Queue System** is a robust, file-based queue system designed to
 5. **Error Handling**:
    - Improved my skills in debugging and resolving issues related to file paths, ports, and process management.
 ---
-###setbacks or roadblocks Handling
+## setbacks or roadblocks Handling
 For technical issues (e.g., SQLite errors, Supervisor configuration), I researched online and sought help from ChatGPT.
 For design challenges, I revisited the requirements and iterated on the solution.
