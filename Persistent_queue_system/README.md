@@ -9,7 +9,7 @@ In distributed systems, ensuring reliable job processing is a common challenge. 
 - Handles consumer crashes gracefully.
 - Detects and manages problematic jobs.
 - Abstracts the database implementation for future extensibility.
-- 
+  
 ## System Design
 The system consists of the following components:
 
