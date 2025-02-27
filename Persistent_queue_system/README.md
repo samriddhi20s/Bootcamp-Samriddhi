@@ -17,10 +17,12 @@ This project implements a producer-consumer system with a persistent queue that 
 - Run Admin console: `streamlit run admin_console.py`
 
 ## Task Flow
+
 ```mermaid
 graph TD
-    A[Producer] --> B[Queue]
-    B --> C[Consumer]
-    C --> D[Processed Jobs]
-    B --> E[Ops Console]
-    B --> F[Admin Console]
+    Producer -->|Submit Job| Queue
+    Queue -->|Dequeue Job| Consumer
+    Consumer -->|Acknowledge| Queue
+    Consumer -->|Crash| Queue
+    Queue -->|Requeue Job| Consumer
+    Queue -->|Move to Dead Letter| DeadLetterQueue
