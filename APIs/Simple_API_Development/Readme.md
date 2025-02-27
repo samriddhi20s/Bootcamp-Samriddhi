@@ -59,14 +59,5 @@ uvicorn main:app --reload
 - Background tasks for processing actions asynchronously.
 - File uploads and serving static content enabled.
 
-## Project Structure
-```
-/your_project_directory
-│── main.py
-│── database.py
-│── models.py
-│── templates/
-│── static/
-│── README.md
-```
+
 
