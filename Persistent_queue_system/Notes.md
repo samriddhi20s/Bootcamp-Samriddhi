@@ -3,6 +3,7 @@
 ## Overview
 The **Persistent Queue System** is a robust, file-based queue system designed to ensure message persistence, fault tolerance, and scalability. It includes a **Producer** to enqueue messages, a **Consumer** to dequeue messages, and two Streamlit-based interfaces: an **Ops Console** for queue operations and an **Admin Console** for system monitoring and management. The system also integrates a **FastAPI** backend for programmatic access and uses **SQLite** for persistent storage.
 
+## Project Structure
  1. **`api.py`**
 - **Functionality**: Implements the FastAPI backend for programmatic access to the queue system.
 - **Key Features**:
