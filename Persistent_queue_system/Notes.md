@@ -18,7 +18,7 @@ The **Persistent Queue System** is a robust, file-based queue system designed to
 - **Functionality**: Initializes the `persistent_queue` module and makes its components accessible.
 
 #### b. **`interfaces.py`**
-- **Functionality**: Defines abstract base classes (ABCs) for queue interfaces.
+- **Functionality**: Defines abstract base classes for queue interfaces.
 - **Key Contributions**:
   - Provides a blueprint for implementing different types of queues (e.g., SQLite-based, file-based).
 
