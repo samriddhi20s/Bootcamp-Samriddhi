@@ -99,3 +99,16 @@ The **Persistent Queue System** is a robust, file-based queue system designed to
 - **Key Contributions**:
   - Helps users understand and use the project effectively.
 
+## Key Features
+- **Message Persistence**: Messages are stored in an SQLite database for durability.
+- **Fault Tolerance**: Handles system crashes and ensures message recovery.
+- **Streamlit Interfaces**: Provides user-friendly interfaces for queue operations and monitoring.
+- **Programmatic Access**: Exposes RESTful APIs via FastAPI for integration with other systems.
+
+## Technologies Used
+- **Programming Language**: Python
+- **Libraries**:
+  - `FastAPI`: For building RESTful APIs.
+  - `Streamlit`: For building web-based interfaces.
+  - `SQLite`: For persistent storage of messages and metadata.
+  - `Supervisord`: For process management and monitoring
